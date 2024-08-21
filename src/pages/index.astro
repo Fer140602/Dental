@@ -1,0 +1,33 @@
+---
+import Header from '../components/Header.astro';
+import Carrusel from '../components/Carrusel.astro';
+import Contact from '../components/Contact.astro';
+import Services from '../components/Services.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Header/>
+		<section id="carrusel">
+			<Carrusel/>
+		</section>
+		<section id="servicios">
+			<Services/>
+		</section>
+		<section id="contact">
+			<Contact/>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+</style>

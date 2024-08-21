@@ -1,0 +1,73 @@
+<header class="bg-white shadow-lg">
+    <nav class="flex flex-wrap items-center justify-between p-3" style="background: rgb(174,238,224);
+background: linear-gradient(90deg, rgba(174,238,224,1) 0%, rgba(46,137,244,1) 41%);">
+        <div class="flex items-center space-x-4">
+            <img
+                src="https://static.vecteezy.com/system/resources/previews/011/958/706/original/blue-tooth-logo-icon-and-line-for-text-for-dentist-or-stomatology-dental-care-design-template-isolated-black-line-contour-tooth-symbol-for-dental-clinic-or-dentistry-medical-center-vector.jpg"
+                alt="Logo Centro Odontológico"
+                class="h-10 w-10"
+            />
+            <span class="self-center text-xl md:text-2xl font-semibold text-orange-50"
+                >Centro Odontológico</span
+            >
+        </div>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+                <img
+                    class="toggle block"
+                    src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png"
+                    width="32"
+                    height="32"
+                />
+                <img
+                    class="toggle hidden"
+                    src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
+                    width="32"
+                    height="32"
+                />
+            </button>
+        </div>
+        <div
+            id="menu"
+            class="toggle hidden w-full md:w-auto md:flex text-right mt-5 md:mt-0 border-t-2 border-teal-100 md:border-none"
+        >
+            <a
+                href="#carrusel"
+                class="block md:inline-block text-yellow-50 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-100 md:border-none"
+                >Inicio</a
+            >
+            <a
+                href="#servicios"
+                class="block md:inline-block text-yellow-50 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-100 md:border-none"
+                >Servicios</a
+            >
+            <a
+                href="#contact"
+                class="block md:inline-block text-yellow-50 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-100 md:border-none"
+                >Contacto</a
+            >
+        </div>
+    </nav>
+</header>
+
+<script type="text/javascript">
+    function handleMenuToggle() {
+        const menu = document.getElementById("menu");
+        const toggleIcons = document.querySelectorAll("toggle");
+
+        if (menu) {
+            menu.classList.toggle("hidden");
+        }
+
+        toggleIcons.forEach((icon) => {
+            icon.classList.toggle("hidden");
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        if (hamburger) {
+            hamburger.addEventListener("click", handleMenuToggle);
+        }
+    });
+</script>
